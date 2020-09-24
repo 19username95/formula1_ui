@@ -11,3 +11,7 @@ body {
 body.lock {
   overflow: hidden;
 }
+
+.container {
+  margin: $container-mobile;
+}
