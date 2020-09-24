@@ -2,4 +2,105 @@
 
 main {
   margin-top: $header-size;
+
+  section#jumbotron {
+    display: grid;
+    grid-template-columns: minmax(320px, 100%);
+    grid-template-rows: minmax(180px, 25vh) minmax(50px, auto);
+
+    .jumbotron__background {
+      grid-row: 1;
+      grid-column: 1;
+      height: 55%;
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .jumbotron__logo {
+      grid-row: 1;
+      grid-column: 1;
+      height: 100%;
+      align-content: center;
+      justify-self: center;
+      width: fit-content;
+      display: grid;
+      * {
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0;
+      }
+
+      .jumbotron__logo-body {
+        width: fit-content;
+
+        h1 {
+          font-style: italic;
+          font-weight: bold;
+          font-size: 330%;
+          //font-size: 2.75em;
+          text-align: center;
+          color: $title-color;
+          line-height: 130%;
+        }
+
+        h6 {
+          color: $main-color;
+          line-height: 0;
+        }
+        h6:first-child {
+          text-align: left;
+          font-size: 10px;
+        }
+        h6:last-child {
+          text-align: right;
+          font-size: 12px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    .jumbotron__image {
+      grid-row: 2;
+      width: 65%;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    section#jumbotron {
+      grid-template-rows: minmax(300px, 25vh);
+
+      .jumbotron__background {
+        height: 100%;
+      }
+
+      .jumbotron__logo {
+        justify-self: start;
+        margin-left: 10%;
+
+        .jumbotron__logo-body {
+          h6:first-child {
+            font-size: 16px;
+          }
+          h6:last-child {
+            font-size: 18px;
+          }
+        }
+      }
+      .jumbotron__image {
+        grid-row: 1;
+        grid-column: 1;
+        align-self: end;
+        justify-self: end;
+        margin-right: 10vw;
+        transform: translate(0, 40%);
+        width: fit-content;
+        max-width: 750px;
+      }
+    }
+  }
 }
