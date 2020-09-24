@@ -1,0 +1,13 @@
+@import "variables";
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: $background-color;
+  height: 100%;
+  font-family: $font-family-titillium-web;
+}
+
+body.lock {
+  overflow: hidden;
+}

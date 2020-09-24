@@ -1,0 +1,213 @@
+@import "variables";
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  * {
+    color: $header-color;
+    font-family: $font-family-titillium-web;
+  }
+
+  .header__menu-background-mobile {
+    display: none;
+  }
+
+  .header__menu-background-mobile.active {
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: $header-background-color;
+    opacity: 0.38;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+  }
+
+  .header__body {
+    z-index: 10;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: $header-size;
+    align-items: center;
+
+    padding: 0 30px;
+
+    .header__left-container {
+      display: flex;
+      align-items: center;
+
+      .header__burger {
+        display: block;
+        position: relative;
+        width: 18px;
+        height: 12px;
+        z-index: 3;
+
+        margin-right: 20px;
+
+        span {
+          position: absolute;
+          background-color: $header-burger-menu-color;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          top: 5px;
+          transition: all 0.3s ease 0s;
+        }
+      }
+
+      .header__burger:before,
+      .header__burger:after {
+        content: '';
+        background-color: $header-burger-menu-color;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+      }
+
+      .header__burger:before {
+        top: 0;
+      }
+
+      .header__burger:after {
+        bottom: 0;
+      }
+
+      .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 5px;
+      }
+
+      .header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 5px;
+      }
+
+      .header__burger.active span {
+        transform: scale(0);
+      }
+
+      .header__logo {
+        flex-basis: 70px;
+        display: flex;
+        align-content: center;
+        position: relative;
+        z-index: 3;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+
+    .header__right-container {
+      display: flex;
+
+      .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 30%;
+        background-color: $header-background-color;
+        margin-top: $header-size;
+        transition: all 0.3s ease 0s;
+
+        .header__list {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          z-index: 2;
+          padding: 0;
+          margin: 0;
+          height: 100%;
+
+          li {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+
+            .header--link {
+              color: $header-color;
+              text-decoration: none;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      .header__menu.active {
+        top: 0;
+      }
+
+      button {
+        background-color: $header-button-color;
+        z-index: 3;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 14px;
+        line-height: 30px;
+        border: 0;
+        outline: none;
+        width: 100px;
+        height: 30px;
+      }
+    }
+  }
+}
+
+header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $header-background-color;
+  z-index: 2;
+}
+
+
+@media screen and (min-width: $breakpoint-tablet) {
+  header {
+    .header__body {
+      .header__left-container {
+        .header__burger {
+          display: none;
+        }
+      }
+
+      .header__right-container {
+        align-items: center;
+
+        .header__menu {
+          position: relative;
+          margin: 0;
+          transition: 0s;
+
+          .header__list {
+            flex-direction: row;
+            justify-content: space-around;
+            margin-right: 50%;
+            li {
+              margin-right: 40%;
+            }
+          }
+        }
+
+        button {
+          width: 150px;
+        }
+      }
+    }
+  }
+}
+
