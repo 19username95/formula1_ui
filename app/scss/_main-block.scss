@@ -96,8 +96,8 @@ main {
         grid-column: 1;
         align-self: end;
         justify-self: end;
-        margin-bottom: -5%;
-        margin-right: 5vw;
+        margin-right: 10vw;
+        transform: translate(0, 40%);
         width: fit-content;
         max-width: 750px;
       }
