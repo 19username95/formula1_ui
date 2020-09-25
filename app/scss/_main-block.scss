@@ -162,7 +162,7 @@ main {
       margin-top: $section-margin-top-desktop;
 
       display: grid;
-      grid-template-columns: 50vw 50vw;
+      grid-template-columns: 50% 50%;
 
       * {
         grid-row: 1;
