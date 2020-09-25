@@ -2,4 +2,341 @@
 
 main {
   margin-top: $header-size;
+
+  section#jumbotron {
+    display: grid;
+    grid-template-columns: minmax(320px, 100%);
+    grid-template-rows: minmax(180px, 25vh) minmax(50px, auto);
+
+    .jumbotron__background {
+      grid-row: 1;
+      grid-column: 1;
+      height: 55%;
+      width: 100%;
+      position: relative;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .jumbotron__logo {
+      grid-row: 1;
+      grid-column: 1;
+      height: 100%;
+      align-content: center;
+      justify-self: center;
+      width: fit-content;
+      display: grid;
+      * {
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0;
+      }
+
+      .jumbotron__logo-body {
+        width: fit-content;
+
+        h1 {
+          font-style: italic;
+          font-weight: bold;
+          font-size: 330%;
+          //font-size: 2.75em;
+          text-align: center;
+          color: $title-color;
+          line-height: 130%;
+        }
+
+        h6 {
+          color: $subtitle-color;
+          line-height: 0;
+        }
+        h6:first-child {
+          text-align: left;
+          font-size: 10px;
+        }
+        h6:last-child {
+          text-align: right;
+          font-size: 12px;
+          line-height: 100%;
+        }
+      }
+    }
+
+    .jumbotron__image {
+      grid-row: 2;
+      width: 65%;
+      max-width: 400px;
+      height: auto;
+    }
+  }
+
+  section#about {
+    padding: $container-mobile;
+    margin-top: $section-margin-top-mobile;
+    //display: flex;
+   // flex-direction: row;
+   // flex-wrap: wrap;
+  // * {}
+
+    .about__view {
+
+      display: grid;
+
+      * {
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0;
+      }
+
+      .about__view-background {
+        width: 100%;
+      }
+
+      .about__view-title {
+        justify-self: start;
+        align-self: start;
+        color: $title-color;
+        font-weight: $title-font-weight;
+        font-style: $title-font-style;
+        font-size: $title-font-size-mobile;
+        transform: translate(0, -60%);
+      }
+
+      .about__view-info {
+        color: $white;
+        align-self: end;
+        padding: 12px;
+        font-size: 0.85em;
+        letter-spacing: 0.01em;
+        line-height: 133%;
+        //font-style: italic;
+        font-weight: lighter !important;
+      }
+    }
+
+    .about__article {
+      p {
+        margin: 0;
+        padding-top: 10%;
+        font-size: 1.1em;
+        color: $main-color;
+      }
+    }
+  }
+
+  section#car, section#drivers {
+    h1 {
+      overflow:hidden;
+      color: $pink;
+      font-size: 2em;
+      font-weight: $title-font-weight;
+      font-style: $title-font-style;
+      font-family: $font-family-titillium-web;
+      margin-bottom: 0;
+      padding: $container-title-mobile;
+    }
+    h1:after{
+      content:'';
+      display:inline-block;
+      width:100%; height:100%;
+      margin-right:-100%;
+      margin-left: 3%;
+      border-bottom:3px solid $pink;
+    }
+  }
+
+  section#car {
+    .car__body {
+      color: $main-color;
+
+      .car__summary {
+        padding: $container-mobile;
+        margin-top: 6%;
+        margin-bottom: -10%;
+
+        li {
+          list-style: none;
+          line-height: 133%;
+          letter-spacing: 0.01em;
+          font-style: italic;
+          font-weight: 600;
+          font-size: 1em;
+        }
+      }
+
+      .car__view {
+        .car__main-view {
+          display: grid;
+
+          .car__image {
+            width: 100%;
+            mix-blend-mode: darken;
+          }
+
+          .car__main-info {
+            padding: 2.5% 5%;
+            background-color: $car-main-info-background;
+
+            * {
+              margin: 0;
+              line-height: 1.7em;
+              font-weight: bold;
+              font-size: .92em;
+            }
+          }
+        }
+
+        .car__full-info {
+          padding: $container-mobile;
+          display: flex;
+          flex-direction: column;
+
+          ul {
+            margin: 0;
+            padding: 8% 0 0 0;
+            font-size: 1em;
+
+            li {
+              list-style: none;
+              line-height: 157%;
+              letter-spacing: 0.01em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-tablet) {
+    section#jumbotron {
+      grid-template-rows: minmax(300px, 25vh);
+
+      .jumbotron__background {
+        height: 100%;
+      }
+
+      .jumbotron__logo {
+        justify-self: start;
+        margin-left: 10%;
+
+        .jumbotron__logo-body {
+          h6:first-child {
+            font-size: 16px;
+          }
+          h6:last-child {
+            font-size: 18px;
+          }
+        }
+      }
+      .jumbotron__image {
+        grid-row: 1;
+        grid-column: 1;
+        align-self: end;
+        justify-self: end;
+        margin-right: 10vw;
+        transform: translate(0, 40%);
+        width: fit-content;
+        max-width: 750px;
+      }
+    }
+
+    section#about {
+      padding: 0;
+      margin-top: $section-margin-top-desktop;
+
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      * {
+        grid-row: 1;
+      }
+      .about__view {
+        align-self: start;
+        .about__view-title {
+          justify-self: end;
+          color: $title-color;
+          font-size: $title-font-size-desktop;
+          transform: translate(45%, -60%);
+        }
+      }
+
+      .about__article {
+        padding: $container-desktop;
+        align-self: center;
+        justify-self: end;
+        width: 65%;
+
+        p {
+          padding: 5% 0;
+          font-size: 1em;
+        }
+      }
+
+    }
+
+    section#car {
+      .car__body {
+        padding: $container-desktop;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        .car__summary {
+          padding: 0;
+          text-align: left;
+        }
+
+        .car__view {
+          flex-basis: 80%;
+
+          .car__main-view {
+            * {
+              grid-row: 1;
+              grid-column: 1;
+            }
+
+            .car__main-info {
+              width: 50%;
+              align-self: end;
+              z-index: 1;
+              background-color: $middle-gray-half-opacity;
+              backdrop-filter: blur(4px);
+              font-size: .8em;
+            }
+          }
+          .car__full-info {
+            padding: 0;
+            flex-direction: row;
+            //flex-wrap: nowrap;
+            width: 100%;
+
+            ul {
+              width: 50%;
+              font-size: .9em;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-pc) {
+    section#car {
+      .car__body {
+        .car__view {
+          .car__main-view {
+            .car__main-info {
+              font-size: 1em;
+            }
+          }
+          .car__full-info {
+            ul {
+              width: 45%;
+              font-size: 1em;
+            }
+          }
+        }
+      }
+    }
+  }
 }

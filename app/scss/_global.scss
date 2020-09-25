@@ -1,13 +1,19 @@
 @import "variables";
 
 body {
-  margin: 0;
   box-sizing: border-box;
   background-color: $background-color;
   height: 100%;
   font-family: $font-family-titillium-web;
+  max-width: 1680px;
+  min-width: 320px;
+  margin: 0 auto;
 }
 
 body.lock {
   overflow: hidden;
+}
+
+.container {
+  margin: 0 $container-mobile;
 }
