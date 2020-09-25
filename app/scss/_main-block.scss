@@ -47,7 +47,7 @@ main {
         }
 
         h6 {
-          color: $main-color;
+          color: $subtitle-color;
           line-height: 0;
         }
         h6:first-child {
@@ -67,6 +67,60 @@ main {
       width: 65%;
       max-width: 400px;
       height: auto;
+    }
+  }
+
+  section#about {
+    padding: $container-mobile;
+    margin-top: $section-margin-top-mobile;
+    //display: flex;
+   // flex-direction: row;
+   // flex-wrap: wrap;
+  // * {}
+
+    .about__view {
+
+      display: grid;
+
+      * {
+        grid-row: 1;
+        grid-column: 1;
+        margin: 0;
+      }
+
+      .about__view-background {
+        width: 100%;
+      }
+
+      .about__view-title {
+        justify-self: start;
+        align-self: start;
+        color: $title-color;
+        font-weight: $title-font-weight;
+        font-style: $title-font-style;
+        font-size: $title-font-size-mobile;
+        transform: translate(0, -60%);
+      }
+
+      .about__view-info {
+        color: $white;
+        align-self: end;
+        padding: 12px;
+        font-size: 0.85em;
+        letter-spacing: 0.01em;
+        line-height: 133%;
+        //font-style: italic;
+        font-weight: lighter !important;
+      }
+    }
+
+    .about__article {
+      p {
+        margin: 0;
+        padding-top: 10%;
+        font-size: 1.1em;
+        color: $main-color;
+      }
     }
   }
 
@@ -101,6 +155,38 @@ main {
         width: fit-content;
         max-width: 750px;
       }
+    }
+
+    section#about {
+      padding: 0;
+      margin-top: $section-margin-top-desktop;
+
+      display: grid;
+      grid-template-columns: 50% 50%;
+
+      * {
+        grid-row: 1;
+      }
+      .about__view {
+        align-self: start;
+        .about__view-title {
+          justify-self: end;
+          color: $title-color;
+          font-size: $title-font-size-desktop;
+          transform: translate(45%, -60%);
+        }
+      }
+
+      .about__article {
+        padding: $container-desktop;
+        align-self: center;
+
+        p {
+          padding: 5% 0;
+          font-size: 1em;
+        }
+      }
+
     }
   }
 }
