@@ -10,6 +10,7 @@ $dark-gray: #333333;
 $white: #F2F2F2;
 $pink: #F50A4D;
 $gray: #4F4F4F;
+$middle-gray: #EBEBEB;
 
 $title-color: $pink;
 $title-font-weight: bold;
@@ -21,6 +22,7 @@ $subtitle-color: $dark-gray;
 $main-color: $gray;
 
 $container-mobile: 0 5%;
+$container-title-mobile: 0 0 0 5%;
 $container-desktop: 0 15%;
 $section-margin-top-mobile: 35%;
 $section-margin-top-desktop: 15%;
@@ -31,5 +33,8 @@ $header-button-color: $pink;
 $header-color: $white;
 $header-size: 60px;
 $header-burger-menu-color: $white;
+
+// car
+$car-main-info-background: $middle-gray;
 
 
