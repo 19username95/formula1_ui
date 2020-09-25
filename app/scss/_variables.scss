@@ -9,10 +9,19 @@ $breakpoint-pc: 1024px;
 $dark-gray: #333333;
 $white: #F2F2F2;
 $pink: #F50A4D;
+$gray: #4F4F4F;
 
 $title-color: $pink;
-$main-color: $dark-gray;
+$title-font-weight: bold;
+$title-font-style: italic;
+$title-font-size-mobile: 36px;
+$title-font-size-desktop: 48px;
+
+$subtitle-color: $dark-gray;
+$main-color: $gray;
+
 $container-mobile: 0 5%;
+$section-margin-top: 35%;
 
 // header
 $header-background-color: $dark-gray;
@@ -20,4 +29,5 @@ $header-button-color: $pink;
 $header-color: $white;
 $header-size: 60px;
 $header-burger-menu-color: $white;
+
 
