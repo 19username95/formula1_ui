@@ -1,0 +1,30 @@
+{
+  "drivers": [
+    {
+      "imageUrl": "/img/hw-driver-stig-2.jpg",
+      "position": "Fullstack racing driver",
+      "firstName": "Javan",
+      "lastName": "Scripter",
+      "races": 122,
+      "wins": 3,
+      "polePositions": 9,
+      "dateOfBirth": "1994,12,10",
+      "podiums": 15,
+      "city": "Madrid",
+      "country": "Spain"
+    },
+    {
+      "imageUrl": "/img/hw-driver-stig-1.jpg",
+      "position": "Senior racing driver",
+      "firstName": "Jonny",
+      "lastName": "FIgmov",
+      "races": 46,
+      "wins": 0,
+      "polePositions": 0,
+      "dateOfBirth": "1998,10,5",
+      "podiums": 4,
+      "city": "Madrid",
+      "country": "Spain"
+    }
+  ]
+}
