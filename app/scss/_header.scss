@@ -12,11 +12,11 @@ header {
     font-family: $font-family-titillium-web;
   }
 
-  .header__menu-background-mobile {
+  .header__menu-background_mobile {
     display: none;
   }
 
-  .header__menu-background-mobile.active {
+  .header__menu-background_mobile.active {
     display: block;
     top: 0;
     left: 0;
