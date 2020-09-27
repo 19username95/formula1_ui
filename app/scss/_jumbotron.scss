@@ -3,7 +3,7 @@
 section#jumbotron {
   display: grid;
   grid-template-columns: minmax(320px, 100%);
-  grid-template-rows: minmax(180px, 10%) minmax(120px, 5%);
+  grid-template-rows: minmax(150px, 10%) minmax(70px, auto);
 
   .jumbotron__background {
     grid-row: 1;
