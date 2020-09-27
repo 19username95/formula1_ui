@@ -3,12 +3,12 @@
 section#jumbotron {
   display: grid;
   grid-template-columns: minmax(320px, 100%);
-  grid-template-rows: minmax(180px, 25vh) minmax(50px, auto);
+  grid-template-rows: minmax(180px, 10%) minmax(120px, 5%);
 
   .jumbotron__background {
     grid-row: 1;
     grid-column: 1;
-    height: 55%;
+    height: 50%;
     width: 100%;
     position: relative;
     top: 0;
@@ -35,9 +35,8 @@ section#jumbotron {
 
       h1 {
         font-style: italic;
-        font-weight: bold;
-        font-size: 330%;
-        //font-size: 2.75em;
+        font-weight: 600;
+        font-size: 3.2em;
         text-align: center;
         color: $title-color;
         line-height: 130%;
@@ -45,15 +44,17 @@ section#jumbotron {
 
       h6 {
         color: $subtitle-color;
-        line-height: 0;
+        letter-spacing: 0.01em;
       }
       h6:first-child {
         text-align: left;
-        font-size: 10px;
+        font-size: 0.8em;
+        line-height: 0;
       }
       h6:last-child {
         text-align: right;
-        font-size: 12px;
+        font-size: 0.9em;
+        letter-spacing: 0.01em;
         line-height: 100%;
       }
     }
@@ -61,6 +62,9 @@ section#jumbotron {
 
   .jumbotron__image {
     grid-row: 2;
+    grid-column: 1;
+    justify-self: start;
+    align-self: start;
     width: 65%;
     max-width: 400px;
     height: auto;
@@ -69,7 +73,7 @@ section#jumbotron {
 
 @media screen and (min-width: $breakpoint-tablet) {
   section#jumbotron {
-    grid-template-rows: minmax(300px, 25vh);
+    grid-template-rows: minmax(300px, 20vh);
 
     .jumbotron__background {
       height: 100%;
@@ -80,11 +84,16 @@ section#jumbotron {
       margin-left: 10%;
 
       .jumbotron__logo-body {
+        h1 {
+          font-weight: 700;
+          font-size: 4.2em;
+        }
+
         h6:first-child {
-          font-size: 16px;
+          font-size: 1em;
         }
         h6:last-child {
-          font-size: 18px;
+          font-size:  1.1em;
         }
       }
     }
