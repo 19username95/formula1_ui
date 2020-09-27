@@ -2,10 +2,9 @@
 
 section#about {
   padding: $container-mobile;
-  margin-top: 12%;
+  padding-top: $section-padding-top-mobile;
 
   .about__view {
-    margin-top: $section-margin-top-mobile;
 
     display: grid;
 
@@ -54,7 +53,7 @@ section#about {
 @media screen and (min-width: $breakpoint-tablet) {
   section#about {
     padding: 0;
-    margin-top: $section-margin-top-desktop;
+    padding-top: $section-padding-top-desktop;
     display: flex;
 
     .about__view {

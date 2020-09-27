@@ -1,3 +1,5 @@
+const TABLET_BREAKPOINT = 768;
+
 document.addEventListener("DOMContentLoaded", function() {
   // drivers section
   fetch('/data.json')
@@ -15,8 +17,10 @@ document.querySelectorAll('.header__link').forEach(link => {
 function burgerCollapse () {
   document.querySelector('.header__burger').classList.toggle('active');
   document.querySelector('.header__menu').classList.toggle('active');
-  document.querySelector('.header__menu-background-mobile').classList.toggle('active');
   document.querySelector('body').classList.toggle('lock');
+
+  if (window.innerWidth < TABLET_BREAKPOINT)
+    document.querySelector('.header__menu-background-mobile').classList.toggle('active');
 }
 
 const renderDrivers = ({ drivers }) => {

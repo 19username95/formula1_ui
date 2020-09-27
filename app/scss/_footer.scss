@@ -1,7 +1,7 @@
 @import "variables";
 
 footer {
-  margin-top: $section-margin-top-mobile;
+  margin-top: $section-padding-top-mobile;
   padding: 4% 5%;
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@ footer {
 
 @media screen and (min-width: $breakpoint-tablet) {
   footer {
-    margin-top: $section-margin-top-desktop;
+    margin-top: $section-padding-top-desktop;
     flex-direction: row;
     justify-content: space-between;
     padding: 5%;

@@ -1,7 +1,7 @@
 @import "variables";
 
 section#car {
-  margin-top: $section-margin-top-mobile;
+  padding-top: $section-padding-top-mobile;
   .car__body {
     color: $main-color;
 
@@ -65,7 +65,7 @@ section#car {
 
 @media screen and (min-width: $breakpoint-tablet) {
   section#car {
-    margin-top: $section-margin-top-desktop;
+    padding-top: $section-padding-top-desktop;
     .car__body {
       padding: $container-desktop;
       display: flex;

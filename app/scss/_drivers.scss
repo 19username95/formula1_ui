@@ -1,7 +1,7 @@
 @import "variables";
 
 #drivers {
-  margin-top: $section-margin-top-desktop;
+  padding-top: $section-padding-top-mobile;
 }
 
 #drivers-container {
@@ -60,7 +60,7 @@
 
 .driver-container, .driver-container-reverse {
   padding: $container-desktop;
-  margin-top: $section-margin-top-desktop;
+  padding-top: $section-padding-top-desktop;
   display: none;
 
   .line {
