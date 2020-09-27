@@ -1,0 +1,132 @@
+@import "variables";
+
+section#car {
+  margin-top: $section-margin-top-mobile;
+  .car__body {
+    color: $main-color;
+
+    .car__summary {
+      padding: $container-mobile;
+      margin-top: 6%;
+      margin-bottom: -10%;
+
+      li {
+        list-style: none;
+        line-height: 133%;
+        letter-spacing: 0.01em;
+        font-style: italic;
+        font-weight: 600;
+        font-size: 1em;
+      }
+    }
+
+    .car__view {
+      .car__main-view {
+        display: grid;
+
+        .car__image {
+          width: 100%;
+          mix-blend-mode: darken;
+        }
+
+        .car__main-info {
+          padding: 2.5% 5%;
+          background-color: $car-main-info-background;
+
+          * {
+            margin: 0;
+            line-height: 1.7em;
+            font-weight: bold;
+            font-size: .92em;
+          }
+        }
+      }
+
+      .car__full-info {
+        padding: $container-mobile;
+        display: flex;
+        flex-direction: column;
+
+        ul {
+          margin: 0;
+          padding: 8% 0 0 0;
+          font-size: 1em;
+
+          li {
+            list-style: none;
+            line-height: 157%;
+            letter-spacing: 0.01em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  section#car {
+    margin-top: $section-margin-top-desktop;
+    .car__body {
+      padding: $container-desktop;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+
+      .car__summary {
+        padding: 0;
+        text-align: left;
+      }
+
+      .car__view {
+        flex-basis: 80%;
+
+        .car__main-view {
+          * {
+            grid-row: 1;
+            grid-column: 1;
+          }
+
+          .car__main-info {
+            width: 50%;
+            align-self: end;
+            z-index: 1;
+            background-color: $middle-gray-half-opacity;
+            backdrop-filter: blur(4px);
+            font-size: .8em;
+          }
+        }
+        .car__full-info {
+          padding: 0;
+          flex-direction: row;
+          //flex-wrap: nowrap;
+          width: 100%;
+
+          ul {
+            width: 50%;
+            font-size: .9em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+  section#car {
+    .car__body {
+      .car__view {
+        .car__main-view {
+          .car__main-info {
+            font-size: 1em;
+          }
+        }
+        .car__full-info {
+          ul {
+            width: 45%;
+            font-size: 1em;
+          }
+        }
+      }
+    }
+  }
+}
