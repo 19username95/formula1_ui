@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
   <link rel="stylesheet" href="css/styles.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;1,700&display=swap"
+        rel="stylesheet">
   <script defer src="js/scripts.min.js"></script>
 </head>
 <body>
@@ -30,7 +31,7 @@
               <a href="#about" class="header__link">About</a>
             </li>
             <li>
-              <a href="#" class="header__link">Drivers</a>
+              <a href="#drivers" class="header__link">Drivers</a>
             </li>
             <li>
               <a href="#car" class="header__link">Car</a>
@@ -111,5 +112,35 @@
       </div>
     </section>
   </main>
+  <footer>
+    <div class="footer__about">
+      <img class="footer__logo" alt="logo" src="img/hw-logo.svg">
+      <p>We are It company that passioned about motorsport. Teamwork,
+        innovations, and modern approaches - principles we are
+        building our team around.</p>
+    </div>
+    <div class="footer__navigation">
+      <nav class="footer__menu">
+        <ul class="footer__list">
+          <li>
+            <a href="#about" class="footer__link">About</a>
+          </li>
+          <li>
+            <a href="#drivers" class="footer__link">Drivers</a>
+          </li>
+          <li>
+            <a href="#car" class="footer__link">Car</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <form class="footer__form" action="/">
+      <label for="user-email"></label>
+      <textarea rows="1" id="user-email" name="email" placeholder="Email"></textarea>
+      <label for="user-message"></label>
+      <textarea rows="3" id="user-message" name="message" placeholder="Message"></textarea>
+      <button type="submit">Contact</button>
+    </form>
+  </footer>
 </body>
 </html>
