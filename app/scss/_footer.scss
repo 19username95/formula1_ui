@@ -87,3 +87,42 @@ footer {
     }
   }
 }
+
+@media screen and (min-width: $breakpoint-tablet) {
+  footer {
+    margin-top: $section-margin-top-desktop;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5%;
+
+    .footer__about {
+      flex-basis: 50%;
+      .footer__logo {
+        width: 25%;
+      }
+
+      p {
+        margin: 3% 0;
+        font-size: .9em;
+        max-width: 75%;
+      }
+    }
+
+    .footer__navigation {
+      flex-basis: 25%;
+      .footer__menu {
+        .footer__list {
+          flex-direction: column;
+          margin: 0;
+          li {
+            margin-bottom: 5%;
+          }
+        }
+      }
+    }
+
+    .footer__form {
+      flex-basis: 25%;
+    }
+  }
+}
