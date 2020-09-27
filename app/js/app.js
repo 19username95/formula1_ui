@@ -34,7 +34,7 @@ const renderDrivers = ({ drivers }) => {
 
     container.insertAdjacentHTML('beforeend',`
         <div class="drivers__driver-container_mobile">
-            <img src="${driver.imageUrl}" class="driver-photo" alt=""/>
+            <img src="${driver.imageUrl}" class="drivers__driver-photo" alt=""/>
             <div class="drivers__driver-position">${driver.position}</div>
             <div class="drivers__line"></div>
             <div class="drivers__driver-name">${driver.firstName} ${driver.lastName}</div>

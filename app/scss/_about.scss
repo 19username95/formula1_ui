@@ -52,6 +52,16 @@ section#about {
 
 @media screen and (min-width: $breakpoint-tablet) {
   section#about {
+    padding-top: 20%;
+
+    .about__article p{
+      padding-top: 5%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+  section#about {
     padding: 0;
     padding-top: $section-padding-top-desktop;
     display: flex;
