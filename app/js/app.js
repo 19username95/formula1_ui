@@ -1,18 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
-
-  // burger menu logic
-document.querySelector('.header__burger').onclick = function() {
-  document.querySelector('.header__burger').classList.toggle('active');
-  document.querySelector('.header__menu').classList.toggle('active');
-  document.querySelector('.header__menu-background-mobile').classList.toggle('active');
-  document.querySelector('body').classList.toggle('lock');
-}
-
   // drivers section
   fetch('/data.json')
     .then(res => res.json())
     .then(renderDrivers);
 });
+
+// burger menu logic
+document.querySelector('.header__burger').onclick = burgerCollapse;
+document.querySelector('.header__menu-background-mobile').onclick = burgerCollapse;
+document.querySelectorAll('.header__link').forEach(link => {
+  link.onclick = burgerCollapse;
+})
+
+function burgerCollapse () {
+  document.querySelector('.header__burger').classList.toggle('active');
+  document.querySelector('.header__menu').classList.toggle('active');
+  document.querySelector('.header__menu-background-mobile').classList.toggle('active');
+  document.querySelector('body').classList.toggle('lock');
+}
 
 const renderDrivers = ({ drivers }) => {
   const container = document.getElementById('drivers-container')
@@ -25,7 +30,7 @@ const renderDrivers = ({ drivers }) => {
 
     container.insertAdjacentHTML('beforeend',`
         <div class="driver-container-mobile">
-            <img src="${driver.imageUrl}" class="driver-photo" />
+            <img src="${driver.imageUrl}" class="driver-photo" alt=""/>
             <div class="driver-position">${driver.position}</div>
             <div class="line"></div>
             <div class="driver-name">${driver.firstName} ${driver.lastName}</div>
@@ -47,7 +52,7 @@ const renderDrivers = ({ drivers }) => {
           <div class="driver-container${reverse ? '-reverse' : ''}">
             <div class="line"></div>
             <div class="driver-profile">
-              <img src="${driver.imageUrl}" class="driver-photo" />
+              <img src="${driver.imageUrl}" class="driver-photo" alt=""/>
               <div class="driver-info">
                   <div class="title">
                       <div class="driver-position">${driver.position}</div>
