@@ -20,7 +20,7 @@
   .drivers__line {
     width: 100%;
     height: 0;
-    border-bottom: 1px solid $middle-grey;
+    border-bottom: 1px solid $driver-line-color;
   }
 
   .drivers__driver-photo {
@@ -67,7 +67,7 @@
     width: 90%;
     margin-bottom: 2%;
     height: 0;
-    border-bottom: 2px solid $middle-grey;
+    border-bottom: 2px solid $driver-line-color;
   }
 
   .drivers__driver-profile {
