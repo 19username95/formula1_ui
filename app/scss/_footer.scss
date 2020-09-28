@@ -1,0 +1,137 @@
+@import "variables";
+
+footer {
+  margin-top: $section-padding-top-mobile;
+  padding: 4% 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: $footer-background-color;
+
+  .footer__about {
+    color: $footer-color;
+    font-size: 1em;
+    font-weight: 400;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+
+    .footer__logo {
+      width: 36%;
+      max-width: 150px;
+      margin-top: 5%;
+    }
+
+    p {
+      margin: 7% 0 0 0;
+    }
+  }
+
+  .footer__navigation {
+    .footer__menu {
+      .footer__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 8% 0;
+        font-weight: 600;
+        font-size: 1.1em;
+        line-height: 178%;
+
+        li {
+          flex-grow: 1;
+
+          .footer__link {
+            color: $footer-form-color;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  .footer__form {
+    * {
+      margin: 2% 0;
+      width: 100%;
+      border-color: $grey;
+      border-width: 1px;
+      color: $footer-form-color;
+      background-color: transparent;
+      outline: none;
+      font-family: $font-family-titillium-web;
+      font-size: 0.95em;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      line-height: 214%;
+      box-sizing: border-box;
+    }
+
+    label {
+      display: none;
+    }
+    textarea {
+      padding: 0 10px;
+      resize: none;
+    }
+    textarea::placeholder {
+      color: $footer-form-color;
+    }
+
+    button {
+      border: none;
+      background-color: $footer-button-color;
+      padding: 2% 0;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  footer {
+    margin-top: $section-padding-top-desktop;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 4% 5%;
+
+    .footer__about {
+      flex-basis: 50%;
+
+      .footer__logo {
+        width: 30%;
+        margin-top: 0;
+      }
+
+      p {
+        margin: 3% 0;
+        font-size: .9em;
+        max-width: 80%;
+      }
+    }
+
+    .footer__navigation {
+      flex-basis: 20%;
+      .footer__menu {
+        .footer__list {
+          flex-direction: column;
+          margin: 0;
+          li {
+            margin-bottom: 5%;
+          }
+        }
+      }
+    }
+
+    .footer__form {
+      flex-basis: 30%;
+
+      * {
+        font-weight: 400;
+        line-height: 214%;
+        margin: 1%;
+      }
+    }
+  }
+}
