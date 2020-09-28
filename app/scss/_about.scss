@@ -1,0 +1,115 @@
+@import "variables";
+
+section#about {
+  padding: $container-mobile;
+  padding-top: $section-padding-top-mobile;
+
+  .about__view {
+
+    display: grid;
+
+    * {
+      grid-row: 1;
+      grid-column: 1;
+      margin: 0;
+    }
+
+    .about__view-background {
+      width: 100%;
+    }
+
+    .about__view-title {
+      justify-self: start;
+      align-self: start;
+      color: $title-color;
+      font-weight: $title-font-weight;
+      font-style: $title-font-style;
+      font-size: $title-font-size-mobile;
+      transform: translate(0, -60%);
+    }
+
+    .about__view-info {
+      color: $white;
+      align-self: end;
+      padding: 12px;
+      font-size: 0.85em;
+      letter-spacing: 0.01em;
+      line-height: 133%;
+      //font-style: italic;
+      font-weight: 400 !important;
+    }
+  }
+
+  .about__article {
+    p {
+      margin: 0;
+      padding-top: 10%;
+      font-size: 1.1em;
+      color: $main-color;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet) {
+  section#about {
+    padding-top: 20%;
+
+    .about__article p{
+      padding-top: 5%;
+    }
+  }
+}
+
+@media screen and (min-width: $breakpoint-pc) {
+  section#about {
+    padding: 0;
+    padding-top: $section-padding-top-desktop;
+    display: flex;
+
+    .about__view {
+      margin-top: calc(48px / 2);
+      display: flex;
+      flex-basis: 50%;
+      position: relative;
+
+      .about__view-background {
+        width: 100%;
+      }
+
+      .about__view-title {
+        justify-self: start;
+        align-self: start;
+        color: $title-color;
+        font-weight: $title-font-weight;
+        font-style: $title-font-style;
+        font-size: $title-font-size-desktop;
+        transform: translate(-50%, -50%);
+      }
+
+      .about__view-info {
+        position: absolute;
+        bottom: 2%;
+        left: 2%;
+        color: $white;
+        font-size: 0.85em;
+        line-height: 133%;
+        font-style: italic;
+      }
+    }
+
+    .about__article {
+      padding: $container-desktop;
+      flex-basis: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      p {
+        margin: 3% 0;
+        padding: 0 5%;
+        font-size: 1em;
+      }
+    }
+
+  }
+}

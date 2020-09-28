@@ -1,0 +1,31 @@
+@import "variables";
+
+section#car, section#drivers {
+  h1 {
+    overflow:hidden;
+    color: $pink;
+    font-size: $title-font-size-mobile;
+    font-weight: $title-font-weight;
+    font-style: $title-font-style;
+    font-family: $font-family-titillium-web;
+    margin: 0;
+    padding: $container-title-mobile;
+    line-height: 100%;
+  }
+  h1:after{
+    content:'';
+    display:inline-block;
+    width:100%; height:100%;
+    margin-right:-100%;
+    margin-left: 3%;
+    border-bottom:3px solid $pink;
+  }
+}
+
+@media screen and (min-width: $breakpoint-tablet){
+  section#car, section#drivers {
+    h1 {
+      font-size: $title-font-size-desktop;
+    }
+  }
+}
