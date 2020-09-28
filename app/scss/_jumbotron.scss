@@ -3,13 +3,13 @@
 section#jumbotron {
   display: grid;
   grid-template-columns: minmax(320px, 100%);
-  grid-template-rows: minmax(150px, 10%) minmax(70px, auto);
+  grid-template-rows: minmax(250px, 10%);
 
   .jumbotron__background {
     grid-row: 1;
     grid-column: 1;
     height: 50%;
-    width: 100%;
+    min-width: 100%;
     position: relative;
     top: 0;
     left: 0;
@@ -36,7 +36,7 @@ section#jumbotron {
       h1 {
         font-style: italic;
         font-weight: 600;
-        font-size: 3.2em;
+        font-size: 3em;
         text-align: center;
         color: $title-color;
         line-height: 130%;
@@ -61,10 +61,10 @@ section#jumbotron {
   }
 
   .jumbotron__image {
-    grid-row: 2;
+    grid-row: 1;
     grid-column: 1;
     justify-self: start;
-    align-self: start;
+    align-self: end;
     width: 65%;
     max-width: 400px;
     height: auto;
