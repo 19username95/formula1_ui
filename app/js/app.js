@@ -12,8 +12,11 @@ window.onresize = function(event) {
   // *if user opened burger menu and then resize window
   if (window.innerWidth >= TABLET_BREAKPOINT) {
     if (document.querySelector('.header__burger').classList.contains('active')) {
-      burgerCollapse();
+
+      document.querySelector('.header__burger').classList.remove('active');
+      document.querySelector('.header__menu').classList.remove('active');
       document.querySelector('.header__menu-background_mobile').classList.remove('active');
+      document.querySelector('body').classList.remove('lock');
     }
   }
 };
@@ -28,12 +31,15 @@ document.querySelectorAll('.header__link').forEach(link => {
 function burgerCollapse () {
   document.querySelector('.header__burger').classList.toggle('active');
   document.querySelector('.header__menu').classList.toggle('active');
-  document.querySelector('body').classList.toggle('lock');
 
   if (window.innerWidth < TABLET_BREAKPOINT)
+  {
     document.querySelector('.header__menu-background_mobile').classList.toggle('active');
+    document.querySelector('body').classList.toggle('lock');
+  }
 }
 
+// drivers section
 const renderDrivers = ({ drivers }) => {
   const container = document.getElementById('drivers-container')
 
